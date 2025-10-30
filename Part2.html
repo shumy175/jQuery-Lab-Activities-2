@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Setup jQuery Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile base CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  <!-- jQuery & jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <script>
+    // penting: pastikan AJAX dimatikan supaya navigation fail luar berfungsi
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+       
+  <!-- Page 1 -->
+  <div data-role="page" id="Homepage">
+
+    <div data-role="header">
+      <h1>jQuery Mobile</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <h4>Homepage</h4>
+      <p>Good Morning everyone</p>
+      <a href="#About">Go to About Page</a>
+
+      <!-- Back to Index Button -->
+      <a href="index.html" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">
+        Back to Index
+      </a>
+    </div>
+
+    <div data-role="footer">
+      <h4>&copy; SHU MOHD 2025</h4>
+    </div>
+
+  </div>
+
+  <!-- Page 2 -->
+  <div data-role="page" id="About">
+
+    <div data-role="header">
+      <h1>About</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <h3>About Page</h3>
+      <p>Welcome to my website!</p>
+
+      <!-- ✅ FIXED: Back to Homepage -->
+      <a href="#Homepage" data-rel="back">
+        Back to Homepage
+      </a>
+    </div>
+
+    <div data-role="footer">
+      <h4>&copy; SHU MOHD 2025</h4>
+    </div>
+
+  </div>
+
+</body>
+</html>

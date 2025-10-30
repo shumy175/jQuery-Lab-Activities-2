@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Setup jQuery Mobile</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false; // prevent AJAX navigation
+    });
+  </script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+    <body>
+
+
+        <!--About page-->
+
+        <div data-role="page" id="about">
+
+            <div data-role="header">
+                <h1>About</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h3>About page</h3>
+                <p>Welcome to the About page</p>
+                <!-- Back to Index Button -->
+                <a href="index.html" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">
+                Back to Index
+                </a>    
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>&copy; SHU MOHD 2025</h4>
+            </div>
+
+        </div>
+
+    </body>
+</html>
